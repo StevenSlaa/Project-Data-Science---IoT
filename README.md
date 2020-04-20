@@ -33,6 +33,11 @@ Om iets met de verzamelde data te doen, heb ik een ESP32 genomen (die verbonden 
 <p>De Raspberry PI Zero W ontvangt de data van de DHT22 en zet het in een JSON-formaat. Deze JSON wordt verstuurd via een POST request naar de ThingSpeak API.</p>
 <p>ThingSpeak maakt de informatie beschikbaar om overal te kunnen gebruiken. In mijn prototype wordt hier een ESP32 Gebruikt. Deze vraagt velden op aan de ThingSpeak API via GET Requests (wordt gebruik gemaakt van de ThingSpeak library, maar achter de schermen worden er GET Requests verstuurd naar de ThingSpeak API).</p>
 <p>De ESP32 zet de data in een goed te lezen formaat en stuurt dit met het I2C protocol naar de OLED display. Dit kan de gebruiker weer aflezen. Natuurlijk kan er aan de ESP32 andere actuatoren worden gehangen (denk hierbij aan een relay), maar voor demonstratie redenen heb ik een OLED display genomen.</p>
+<h2 id="conclusie">Conclusie</h2>
+<p>Tijdens het ontwikkelen van deze codes had ik niet echt problemen ondervonden. De ThingSpeak API was goed onderbouwd. Het enige probleem is dat er een maximum aantal berichten is dat je per account kan versturen/ontvangen. Dit is niet handig op lange termijn.</p>
+<p>Ik heb voor dit keuzevak nog nooit met een raspberry Pi of in python heb geprogrammeerd. Dit was dan ook de hoofdreden dat ik dit keuzevak heb gekozen. Ik vind dat mijn doel daarom ook zeker is bereikt. Ik heb in python leren programmeren en GPIO’s aangestuurd op een Raspberry Pi.</p>
+<p>Als ik terug kijk op dit keuzevak heb ik geleerd om data stromen te analyseren en te kijken waar iets met deze data gebeurt. Zo kom je namelijk sneller achter problemen die ontstaan bij deze stromen. Bijvoorbeeld toen ik de DHT aansloot op de Raspberry pi bleek dit niet snel te werken. Er moest namelijk minimaal 6 seconden tussen de verzoeken zitten naar de sensor. Dit had ik in eerste instantie niet gezien en had daarom het probleem sensor geen waardes terug gaf toen ik daarom vroeg.</p>
+<p>In de toekomst kunnen er aan de ESP32 andere actuatoren worden gehangen om de data stroom te verlengen. Denk hierbij aan een relay die een ventilator aanzet als de temperatuur boven een bepaalde grens komt.</p>
 <h2 id="git-repository">Git repository</h2>
 <p>Ik heb mijn repository opgedeeld in 3 mappen</p>
 <ul>
